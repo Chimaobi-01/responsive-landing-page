@@ -64,7 +64,8 @@
             row-gap: 3.8rem;
 
             @include md{
-               justify-content: center;
+               column-gap: 2.12rem;
+               justify-content: space-between;
              }     
             
 

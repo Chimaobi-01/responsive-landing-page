@@ -113,6 +113,11 @@
       flex-direction: column;
       gap: 2.19rem;
 
+      @include md {
+        width: 100%;
+        padding: 2rem 1.5rem;
+      }
+
       .name_budget {
         display: flex;
         gap: 1.87rem;

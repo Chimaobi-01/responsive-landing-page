@@ -4,14 +4,18 @@
   color: #fff;
   width: 100%;
   min-height: 100vh;
-  padding-top: 5rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  place-items: center;
+  padding: 5.25rem;
+  gap: 5.25rem;
+  position: relative;
+  background: linear-gradient(#2F189330, #2F189360), no-repeat center/cover url("/landing.png");
 
-  background-image: url("/landing.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  @include md{
+    padding: 0;
+    padding-bottom: 2.25rem;
+    gap: 3.25rem;
+  }
 
 
 

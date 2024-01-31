@@ -8,6 +8,10 @@
   
     background: linear-gradient(rgba(13, 42, 211, 0.6), rgba(81, 129, 233, 0.6)), no-repeat center/cover url("/content.png");
 
+    @include md {
+      height: 75vh;
+    }
+
 
   
     div {
@@ -44,6 +48,11 @@
         line-height: 4.375rem;
         /* 120.69% */
         letter-spacing: -0.0625rem;
+
+        @include md {
+          margin: .85rem 0;
+          font-size: 3.425rem;
+        }
       }
   
       p {

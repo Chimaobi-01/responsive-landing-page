@@ -8,10 +8,7 @@
   justify-content: space-around;
   position: relative;
 
-  background-image: url("/features.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background: linear-gradient(#2F189330, #2F189360), no-repeat center/cover url("/features.png");
 
   @include md {
     justify-content: center;
@@ -75,6 +72,9 @@
             font-weight: 700;
             line-height: 3.25rem; /* 123.81% */
             letter-spacing: -0.025rem;
+            @include md{
+                text-align: center;
+            }
         }
         p{
             color: var(--Colors-White, #FFF);
@@ -85,6 +85,10 @@
             font-style: normal;
             font-weight: 500;
             line-height: 2rem; /* 145.455% */
+
+            @include md{
+                text-align: center;
+            }
         }
     }
     .bottom{
