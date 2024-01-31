@@ -1,0 +1,102 @@
+@import '../../styles/responsive.scss';
+
+.getstarted {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(rgba(144, 148, 167, 0.6), rgba(144, 157, 184, 0.6)), no-repeat center/cover url("/getstarted.jpg");
+  display: grid;
+  place-items: center;
+
+  .gscontainer{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.63rem;
+
+    @include md{
+        width: 100%;
+    }
+
+
+    .gstop{
+       
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        justify-content: center;
+        align-items: center;
+
+        h4{
+            color: var(--Colors-White, #FFF);
+            text-align: center;
+            width: 48.125rem;
+            height: 10.0625rem;
+
+            @include md{
+                width: 100%;
+            }
+            
+            /* Heading / H2 Header */
+            font-family: "DM Sans";
+            font-size: 3.625rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 4.375rem; /* 120.69% */
+            letter-spacing: -0.0625rem;
+        }
+
+        p{
+            color: var(--Colors-White, #FFF);
+            text-align: center;
+            width: 32.375rem;
+
+            /* Heading / H5 Lead */
+            font-family: "DM Sans";
+            font-size: 1.375rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 2rem; /* 145.455% */
+        }
+    }
+
+    .gsbottom{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.88rem;
+
+        button{
+            color: var(--Colors-White, #FFF);
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            /* Buttons / Big */
+            font-family: "DM Sans";
+            font-size: 1.25rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.625rem; /* 130% */
+
+
+            &:nth-child(1){
+                width: 4.375rem;
+                height: 4.375rem;
+
+                border-radius: 6.25rem;
+                background: var(--Socials-Youtube, #EA3223);
+            }
+
+            &:nth-child(2){
+                width: 13.3125rem;
+                height: 4.375rem;
+                border-radius: 6.25rem;
+                background: var(--Action-Primary, #25DAC5);
+            }
+        }
+    }
+  }
+}

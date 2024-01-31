@@ -1,0 +1,104 @@
+@import '../../styles/responsive.scss';
+
+.testimonial{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 6.25rem;
+    background: var(--Colors-Heading, #1E0E62);
+
+    @include md{
+       padding: 4.25rem 2.25rem;
+    }
+
+
+
+    .tmcontainer{
+        width: 80%;
+
+        @include md{
+            width: 100%;
+         }
+        
+        h4{
+            color: #FFF;
+
+            /* Heading / H3 Title */
+            font-family: "DM Sans";
+            font-size: 2.625rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 3.25rem; /* 123.81% */
+            letter-spacing: -0.025rem;
+            margin-bottom: 2.5rem;
+
+            @include md{
+                text-align: center;
+             }
+        }
+        
+
+        .tmgrid{
+            display: grid;
+            grid-template-columns: repeat(2,minmax(29.375rem, 1fr));
+            gap: 1.88rem;
+            place-items: center;
+
+            @include md{
+                grid-template-columns: 1fr;
+            }
+
+            .tmcard{
+                border-radius: 0.625rem;
+                border: 2px solid var(--Colors-White, #FFFfff30);
+                display: flex;
+                gap: 1.87rem;
+                min-height: 14.81rem;
+                padding: 2.19rem 1.75rem 1.44rem 2.19rem;
+
+                img{
+                    width: 4.375rem;
+                    height: 4.375rem;
+                    border-radius: 0.625rem;
+                    object-fit: cover;
+                }
+
+                .cardtext{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 0.81rem;
+
+
+                    p{
+                        color: #FFF;
+
+                        /* Text / Article */
+                        font-family: "DM Sans";
+                        font-size: 1.125rem;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 1.75rem; /* 155.556% */
+                    }
+
+                    span{
+                        color: var(--Colors-White, #FFF);
+
+                        /* Text / Label */
+                        font-family: "DM Sans";
+                        font-size: 0.875rem;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 1.625rem; /* 185.714% */
+                        letter-spacing: 0.125rem;
+                        text-transform: uppercase;
+
+                        opacity: 0.3;
+                    }
+                }
+
+            }
+        }
+    }
+}

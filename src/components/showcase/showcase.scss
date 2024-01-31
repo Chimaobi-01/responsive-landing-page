@@ -1,0 +1,122 @@
+@import '../../styles/responsive.scss';
+
+.showcase{
+    min-height: 100vh;
+    height: 100%;
+    padding: 6.25rem;
+    display: grid;
+    place-items: center;
+    background: var(--Background-Dark, #2F1893);
+
+    @include md{
+        padding: 3.5rem 2.25rem;
+    }
+
+
+    .shccontainer{
+        display: flex;
+        flex-direction: column;
+        gap: 3.3rem;
+        width: 70%;
+
+        @include md{
+            width: 100%;
+            gap: 4.3rem;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h4{
+                color: var(--Colors-White, #FFF);
+
+                /* Heading / H3 Title */
+                font-family: "DM Sans";
+                font-size: 2.625rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 3.25rem; /* 123.81% */
+                letter-spacing: -0.025rem;
+            }
+
+            span{
+                border-radius: 6.25rem;
+                border: 2px solid var(--Colors-White, #FFFfff30);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: .70rem 1.5rem;
+
+
+                color: var(--Colors-White, #FFF);
+                text-align: center;
+                
+                /* Buttons / Middle */
+                font-family: "DM Sans";
+                font-size: 1.125rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.625rem; /* 144.444% */
+            }
+        }
+
+        .shcgrid{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 4.5rem;
+            column-gap: 1.88rem;
+            place-items: center;
+
+            @include md{
+                grid-template-columns: 1fr;
+            }
+
+            .item{
+                display: flex;
+                flex-direction: column;
+                gap: 1.88rem;
+
+
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .itemtext{
+                    display: flex;
+                    flex-direction: column;
+
+                    span{
+                        
+                        &:nth-child(1){
+                            color: var(--Colors-White, #FFF);
+                            text-align: center;
+                            
+                            /* Text / Label */
+                            font-family: "DM Sans";
+                            font-size: 0.875rem;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 1.625rem; /* 185.714% */
+                            letter-spacing: 0.125rem;
+                            text-transform: uppercase;
+                        }
+                        &:nth-child(2){
+                            color: var(--Colors-White, #FFF);
+                            text-align: center;
+                            
+                            /* Heading / H5 Lead */
+                            font-family: "DM Sans";
+                            font-size: 1.375rem;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 2rem; /* 145.455% */
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

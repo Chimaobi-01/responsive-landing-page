@@ -1,0 +1,90 @@
+@import '../../styles/responsive.scss';
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    position: absolute;
+    width: 100%;
+    transition: all 1s linear;
+
+    @include md{
+        justify-content: space-between;
+        padding: 2.25rem;
+    }
+
+    .link{
+        color: var(--Colors-White, #FFF);
+    
+        /* Buttons / Middle */
+        font-family: "DM Sans";
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.625rem; /* 144.444% */
+        text-decoration: none;
+
+        span{
+            display: none;
+        }
+
+        @include md{
+            &:not(:first-child){
+                display: none;
+            }
+        }
+
+        &:hover{
+            opacity: 0.3;
+        }
+    }
+    a{
+        &:last-child{
+            color: #fff;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 500;
+            display: none;
+
+            @include md{
+                display: inline-flex;
+            }
+        }
+    }
+}
+
+.navbar.responsive{
+    flex-direction: column;
+    position: relative;
+    position: absolute;
+    
+    width: 100%;
+    align-items: start;
+    background-color: #482BE780;
+    gap: 0.5rem;
+    padding: 2.25rem 0 0;
+
+
+
+    .link{
+        display: flex;
+        gap: .5rem;
+        align-items: center;
+        border-bottom: 1px solid #ffffff30;
+        width: 100%;
+        padding: .85rem 2.25rem;
+
+        span{
+            display: inline;
+        }
+    }
+
+    a{
+        &:last-child{
+           position: absolute;
+           top: 2.25rem;
+           right: 2.25rem;
+        }
+    }
+}
