@@ -7,6 +7,10 @@
   display: grid;
   place-items: center;
 
+  @include md{
+    padding: 3.25rem 2.25rem;
+  }
+
   .gscontainer{
     width: 60%;
     display: flex;
